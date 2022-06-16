@@ -16,7 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.introductiontojetpackcompose.ui.ImageCardActivity
+import com.example.introductiontojetpackcompose.ui.StateActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -46,7 +46,7 @@ class SplashActivity : ComponentActivity() {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed(
             {
-                startActivity(Intent(this, ImageCardActivity::class.java))
+                startActivity(Intent(this, StateActivity::class.java))
             }, 3000
         )
     }
