@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.introductiontojetpackcompose.ui.StateActivity
+import com.example.introductiontojetpackcompose.ui.ViewsActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -46,7 +47,7 @@ class SplashActivity : ComponentActivity() {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed(
             {
-                startActivity(Intent(this, StateActivity::class.java))
+                startActivity(Intent(this, ViewsActivity::class.java))
             }, 3000
         )
     }
