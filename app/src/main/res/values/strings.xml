@@ -4,4 +4,5 @@
     <string name="title_activity_image_card">ImageCardActivity</string>
     <string name="title_activity_state">StateActivity</string>
     <string name="title_activity_views">ViewsActivity</string>
+    <string name="title_activity_full_layout">FullLayoutActivity</string>
 </resources>
