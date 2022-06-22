@@ -5,4 +5,5 @@
     <string name="title_activity_state">StateActivity</string>
     <string name="title_activity_views">ViewsActivity</string>
     <string name="title_activity_full_layout">FullLayoutActivity</string>
+    <string name="title_activity_snack_bar_and_text_field">SnackBarAndTextField</string>
 </resources>
