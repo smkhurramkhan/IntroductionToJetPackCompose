@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.introductiontojetpackcompose.ui.SnackBarAndTextField
 import com.example.introductiontojetpackcompose.ui.ViewsActivity
+import com.example.introductiontojetpackcompose.ui.ui.ListsActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -59,7 +60,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        SnackBarAndTextField::class.java
+                        ListsActivity::class.java
                     )
                 )
                 finish()
