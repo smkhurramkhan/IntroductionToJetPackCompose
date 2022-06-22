@@ -3,60 +3,62 @@ package com.example.introductiontojetpackcompose.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Alignment
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import kotlinx.coroutines.launch
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.sp
 
 class ViewsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val scaffoldState = rememberScaffoldState()
-            var textFieldState = remember {
-                mutableStateOf("")
-            }
-            val scope = rememberCoroutineScope()
-            Scaffold(
-                modifier = Modifier.fillMaxSize(),
-                scaffoldState = scaffoldState
+
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(0xFF101010))
             ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 30.dp)
-                ) {
-                    TextField(
-                        value = textFieldState,
-                        label = {
-                            Text(text = "Enter Your Name")
-                        },
-                        onValueChange = {
-                            textFieldState = it
-                        },
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    Button(onClick = {
-                        scope.launch {
-                            scaffoldState.snackbarHostState.showSnackbar("Hello $textFieldState")
+                Text(
+                    text = buildAnnotatedString {
+                        withStyle(
+                            style = SpanStyle(
+                                color = Color.Green,
+                                fontSize = 50.sp
+                            )
+                        ) {
+                                  append("J")
                         }
-                    }) {
-                        Text(text = "Please Greet me")
-                    }
-                }
-            }
+                        append("etPack  ")
 
+                        withStyle(
+                            style = SpanStyle(
+                                color = Color.Red,
+                                fontSize = 50.sp
+                            )
+                        ) {
+                            append("C")
+                        }
+
+                        append("ompose")
+                    },
+                    color = Color.White,
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontStyle = FontStyle.Italic,
+                    textAlign = TextAlign.Center,
+                    textDecoration = TextDecoration.Underline
+                )
+            }
         }
     }
 }

@@ -6,17 +6,24 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import com.example.introductiontojetpackcompose.ui.StateActivity
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.introductiontojetpackcompose.ui.ViewsActivity
 
 
@@ -24,38 +31,95 @@ class SplashActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Row(
+            val painter = painterResource(id = R.drawable.ragnar)
+            val title = getString(R.string.app_name)
+            val description = getString(R.string.app_name)
 
-                verticalAlignment = Alignment.CenterVertically
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight()
+
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Red),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
-                    splashName(name = getString(R.string.app_name))
-
-                }
-
+                SplashCard(
+                    painter = painter,
+                    contentDescription = description,
+                    title = title
+                )
             }
 
 
         }
 
+
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed(
             {
-                startActivity(Intent(this, ViewsActivity::class.java))
-            }, 3000
+                startActivity(
+                    Intent(
+                        this,
+                        ViewsActivity::class.java
+                    )
+                )
+            }, 6000
         )
     }
 }
 
 @Composable
-fun splashName(name: String) {
-    Text(text = "$name!")
+fun SplashCard(
+    painter: Painter,
+    contentDescription: String,
+    title: String,
+    modifier: Modifier = Modifier
+
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(1.dp),
+        elevation = 5.dp
+    ) {
+        Box(modifier = modifier.fillMaxHeight()) {
+            Image(
+                painter = painter,
+                contentDescription = contentDescription,
+                contentScale = ContentScale.Crop
+
+            )
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(
+                        Brush.verticalGradient(
+                            colors = listOf(
+                                Color.Transparent,
+                                Color.Black
+                            ),
+                            startY = 300f
+                        )
+
+                    )
+            )
+
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(12.dp),
+                contentAlignment = Alignment.BottomCenter
+            ) {
+
+                Text(
+                    text = title,
+                    style = TextStyle(
+                        color = Color.White,
+                        fontSize = 16.sp,
+                        textAlign = TextAlign.Center
+                    )
+                )
+            }
+        }
+
+    }
 }
 
 

@@ -28,8 +28,8 @@ class ImageCardActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val painter = painterResource(id = R.drawable.ragnar)
-            val title = "Ragnar Lothbrok"
-            val description = "Skol"
+            val title = getString(R.string.app_name)
+            val description = getString(R.string.app_name)
 
             Box(modifier = Modifier.fillMaxWidth(0.5f)
                 .padding(16.dp)) {
