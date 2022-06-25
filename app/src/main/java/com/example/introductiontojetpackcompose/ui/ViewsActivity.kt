@@ -23,42 +23,6 @@ class ViewsActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color(0xFF101010))
-            ) {
-                Text(
-                    text = buildAnnotatedString {
-                        withStyle(
-                            style = SpanStyle(
-                                color = Color.Green,
-                                fontSize = 50.sp
-                            )
-                        ) {
-                                  append("J")
-                        }
-                        append("etPack  ")
-
-                        withStyle(
-                            style = SpanStyle(
-                                color = Color.Red,
-                                fontSize = 50.sp
-                            )
-                        ) {
-                            append("C")
-                        }
-
-                        append("ompose")
-                    },
-                    color = Color.White,
-                    fontSize = 30.sp,
-                    fontWeight = FontWeight.Bold,
-                    fontStyle = FontStyle.Italic,
-                    textAlign = TextAlign.Center,
-                    textDecoration = TextDecoration.Underline
-                )
-            }
         }
     }
 }
