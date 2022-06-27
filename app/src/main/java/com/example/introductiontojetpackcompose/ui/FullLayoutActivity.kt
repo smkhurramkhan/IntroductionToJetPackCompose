@@ -17,24 +17,7 @@ class FullLayoutActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            Column(Modifier.fillMaxSize()) {
-                val color = remember {
-                    mutableStateOf(Color.Yellow)
-                }
-                ColorBox(
-                    Modifier
-                        .weight(1f)
-                        .fillMaxSize()
-                ) {
-                    color.value = it
-                }
-                Box(
-                    modifier = Modifier
-                        .background(color = color.value)
-                        .weight(1f)
-                        .fillMaxSize()
-                )
-            }
+
         }
     }
 }
