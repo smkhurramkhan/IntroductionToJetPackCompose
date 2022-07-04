@@ -28,11 +28,7 @@
             android:exported="false"
             android:label="@string/title_activity_full_layout"
             android:theme="@style/Theme.IntroductionToJetPackCompose" />
-        <activity
-            android:name=".ui.ViewsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_views"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+
         <activity
             android:name=".ui.StateActivity"
             android:exported="false"
