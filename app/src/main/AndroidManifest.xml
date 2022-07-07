@@ -23,11 +23,6 @@
             android:exported="false"
             android:label="@string/title_activity_snack_bar_and_text_field"
             android:theme="@style/Theme.IntroductionToJetPackCompose" />
-        <activity
-            android:name=".ui.FullLayoutActivity"
-            android:exported="false"
-            android:label="@string/title_activity_full_layout"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
 
         <activity
             android:name=".ui.StateActivity"
