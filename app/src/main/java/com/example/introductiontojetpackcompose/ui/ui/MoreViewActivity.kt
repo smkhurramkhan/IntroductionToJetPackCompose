@@ -16,28 +16,7 @@ class MoreViewActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            IntroductionToJetPackComposeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting2("Android")
-                }
-            }
+
         }
-    }
-}
-
-@Composable
-fun Greeting2(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview2() {
-    IntroductionToJetPackComposeTheme {
-        Greeting2("Android")
     }
 }
