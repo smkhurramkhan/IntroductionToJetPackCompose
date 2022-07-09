@@ -8,4 +8,5 @@
     <string name="title_activity_snack_bar_and_text_field">SnackBarAndTextField</string>
     <string name="title_activity_lists">ListsActivity</string>
     <string name="title_activity_more_view">MoreViewActivity</string>
+    <string name="title_activity_layout">LayoutActivity</string>
 </resources>
