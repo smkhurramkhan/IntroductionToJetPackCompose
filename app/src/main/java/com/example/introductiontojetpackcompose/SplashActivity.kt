@@ -58,7 +58,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        HomeScreenActivity::class.java
+                        LayoutActivity ::class.java
                     )
                 )
                 finish()
