@@ -12,4 +12,5 @@
     <string name="title_activity_material">MaterialActivity</string>
     <string name="title_activity_compose_components">ComposeComponentsActivity</string>
     <string name="title_activity_home_screen">HomeScreenActivity</string>
+    <string name="title_activity_more_layouts">MoreLayouts</string>
 </resources>
