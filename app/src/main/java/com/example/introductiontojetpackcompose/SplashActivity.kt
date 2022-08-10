@@ -58,7 +58,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        LayoutActivity ::class.java
+                        MoreJetPackComponents ::class.java
                     )
                 )
                 finish()
