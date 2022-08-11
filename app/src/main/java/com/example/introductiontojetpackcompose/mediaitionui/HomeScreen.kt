@@ -183,9 +183,10 @@ fun CurrentMediation(
         Column {
             Text(
                 text = "Daily Thought",
-                style = MaterialTheme.typography.h3
+                style = MaterialTheme.typography.h6,
+                color = TextWhite,
 
-            )
+                )
 
             Text(
                 text = "Meditation . 3-10 min",
@@ -220,8 +221,9 @@ fun FeatureSection(features: List<Feature>) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
             text = "Features",
-            style = MaterialTheme.typography.h1,
-            modifier = Modifier.padding(15.dp)
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier.padding(10.dp),
+            color = TextWhite
         )
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
