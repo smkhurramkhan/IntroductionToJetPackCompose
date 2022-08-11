@@ -16,4 +16,5 @@
     <string name="title_activity_more_learning">ActivityMoreLearning</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
     <string name="title_activity_full_screen">FullScreenActivity</string>
+    <string name="title_activity_meditation_uiactivity">MeditationUIActivity</string>
 </resources>
