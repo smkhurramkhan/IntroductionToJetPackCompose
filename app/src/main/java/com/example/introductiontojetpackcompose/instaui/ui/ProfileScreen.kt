@@ -45,8 +45,10 @@ fun ProfileScreen() {
     var selectedTabIndex by remember {
         mutableStateOf(0)
     }
+    Column(
+        modifier = Modifier.fillMaxSize()
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    ) {
         TopBar(name = "S M Khurram Khan", modifier = Modifier.padding(16.dp))
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
@@ -381,11 +383,11 @@ fun ProfileDescription(
 fun ButtonSection(
     modifier: Modifier = Modifier
 ) {
-    val minWidth = 95.dp
+    val minWidth = 90.dp
     val minHeight = 30.dp
 
     Row(
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.SpaceAround,
         modifier = modifier
     ) {
 
@@ -463,7 +465,7 @@ fun HighlightSection(
     val context = LocalContext.current
     LazyRow(
         modifier = modifier,
-        horizontalArrangement = Arrangement.SpaceEvenly
+        horizontalArrangement = Arrangement.SpaceAround
     ) {
         items(highlights.size) {
             Column(
@@ -539,7 +541,7 @@ fun PostSection(
     posts: List<Painter>,
     modifier: Modifier = Modifier
 ) {
-   // val mContext = LocalContext.current
+    val mContext = LocalContext.current
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         modifier = modifier
@@ -557,7 +559,7 @@ fun PostSection(
                         width = 1.dp,
                         color = Color.White
                     )
-                   /* .clickable {
+                    .clickable {
                         Toast
                             .makeText(
                                 mContext,
@@ -565,7 +567,7 @@ fun PostSection(
                                 Toast.LENGTH_LONG
                             )
                             .show()
-                    }*/
+                    }
             )
         }
     }
