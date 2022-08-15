@@ -1,7 +1,9 @@
 package com.example.introductiontojetpackcompose.instaui.ui
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
@@ -18,6 +20,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -61,7 +64,8 @@ fun ProfileScreen() {
                     text = "Telegram"
                 )
             ),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .padding(horizontal = 20.dp)
         )
     }
@@ -357,12 +361,26 @@ fun HighlightSection(
     modifier: Modifier = Modifier,
     highlights: List<StoryHighlight>
 ) {
-    LazyRow(modifier = modifier) {
+    val context = LocalContext.current
+    LazyRow(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
         items(highlights.size) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
-                modifier = Modifier.padding(end = 15.dp)
+                modifier = Modifier
+                    .padding(end = 15.dp)
+                    .clickable {
+                        Toast
+                            .makeText(
+                                context,
+                                "Clicked at position $it",
+                                Toast.LENGTH_LONG
+                            )
+                            .show()
+                    }
             ) {
                 RoundImage(
                     image = highlights[it].image,
