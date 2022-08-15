@@ -541,7 +541,7 @@ fun PostSection(
     posts: List<Painter>,
     modifier: Modifier = Modifier
 ) {
-    val mContext = LocalContext.current
+     val mContext = LocalContext.current
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         modifier = modifier
@@ -559,15 +559,15 @@ fun PostSection(
                         width = 1.dp,
                         color = Color.White
                     )
-                    .clickable {
-                        Toast
-                            .makeText(
-                                mContext,
-                                "image clicked at position $it",
-                                Toast.LENGTH_LONG
-                            )
-                            .show()
-                    }
+                 .clickable {
+                     Toast
+                         .makeText(
+                             mContext,
+                             "image clicked at position $it",
+                             Toast.LENGTH_LONG
+                         )
+                         .show()
+                 }
             )
         }
     }
