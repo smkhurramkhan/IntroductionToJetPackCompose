@@ -1,9 +1,8 @@
 package com.example.introductiontojetpackcompose.instaui.ui
 
 import android.widget.Toast
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.activity.ComponentActivity
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -20,7 +19,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -45,8 +43,12 @@ fun ProfileScreen() {
     var selectedTabIndex by remember {
         mutableStateOf(0)
     }
+
+
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
 
     ) {
         TopBar(name = "S M Khurram Khan", modifier = Modifier.padding(16.dp))
@@ -170,6 +172,7 @@ fun ProfileScreen() {
             }
         }
     }
+
 }
 
 
@@ -178,6 +181,7 @@ fun TopBar(
     name: String,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround,
@@ -187,7 +191,11 @@ fun TopBar(
             imageVector = Icons.Default.ArrowBack,
             contentDescription = "Back",
             tint = Color.Black,
-            modifier = Modifier.size(24.dp)
+            modifier = Modifier
+                .size(24.dp)
+                .clickable {
+                    (context as ComponentActivity).finish()
+                }
         )
 
         Text(
@@ -464,7 +472,7 @@ fun HighlightSection(
 ) {
     val context = LocalContext.current
     LazyRow(
-        modifier = modifier,
+        modifier = modifier.height(100.dp),
         horizontalArrangement = Arrangement.SpaceAround
     ) {
         items(highlights.size) {
@@ -541,11 +549,11 @@ fun PostSection(
     posts: List<Painter>,
     modifier: Modifier = Modifier
 ) {
-     val mContext = LocalContext.current
+    val mContext = LocalContext.current
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         modifier = modifier
-            .scale(1.01f)
+            .height(300.dp)
 
     ) {
         items(posts.size) {
@@ -559,15 +567,15 @@ fun PostSection(
                         width = 1.dp,
                         color = Color.White
                     )
-                 .clickable {
-                     Toast
-                         .makeText(
-                             mContext,
-                             "image clicked at position $it",
-                             Toast.LENGTH_LONG
-                         )
-                         .show()
-                 }
+                    .clickable {
+                        Toast
+                            .makeText(
+                                mContext,
+                                "image clicked at position $it",
+                                Toast.LENGTH_LONG
+                            )
+                            .show()
+                    }
             )
         }
     }
