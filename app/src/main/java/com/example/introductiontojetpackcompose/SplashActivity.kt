@@ -58,7 +58,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        InstaUIActivity::class.java
+                        ScrollableActivity::class.java
                     )
                 )
                 finish()

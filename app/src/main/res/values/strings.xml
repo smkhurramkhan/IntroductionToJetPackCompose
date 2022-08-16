@@ -18,4 +18,5 @@
     <string name="title_activity_full_screen">FullScreenActivity</string>
     <string name="title_activity_meditation_uiactivity">MeditationUIActivity</string>
     <string name="title_activity_insta_uiactivity">InstaUIActivity</string>
+    <string name="title_activity_scrollable">ScrollableActivity</string>
 </resources>
