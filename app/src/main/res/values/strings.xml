@@ -19,4 +19,5 @@
     <string name="title_activity_meditation_uiactivity">MeditationUIActivity</string>
     <string name="title_activity_insta_uiactivity">InstaUIActivity</string>
     <string name="title_activity_scrollable">ScrollableActivity</string>
+    <string name="title_activity_navigation_component">NavigationComponentActivity</string>
 </resources>

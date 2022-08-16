@@ -24,7 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.introductiontojetpackcompose.instaui.InstaUIActivity
+import com.example.introductiontojetpackcompose.navigationcomponent.NavigationComponentActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -58,7 +58,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        InstaUIActivity::class.java
+                        NavigationComponentActivity::class.java
                     )
                 )
                 finish()
