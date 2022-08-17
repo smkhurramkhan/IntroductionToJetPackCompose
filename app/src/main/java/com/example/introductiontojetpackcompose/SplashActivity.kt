@@ -24,8 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.introductiontojetpackcompose.bottomnavigation.BottomNavItem
-import com.example.introductiontojetpackcompose.bottomnavigation.BottomNavigationActivity
+import com.example.introductiontojetpackcompose.multiselectlazycolum.MultiSelectLazyColumnActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -59,7 +58,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        BottomNavigationActivity::class.java
+                        MultiSelectLazyColumnActivity::class.java
                     )
                 )
                 finish()
