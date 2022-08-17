@@ -24,7 +24,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.introductiontojetpackcompose.navigationcomponent.NavigationComponentActivity
+import com.example.introductiontojetpackcompose.bottomnavigation.BottomNavItem
+import com.example.introductiontojetpackcompose.bottomnavigation.BottomNavigationActivity
 
 
 class SplashActivity : ComponentActivity() {
@@ -58,7 +59,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        NavigationComponentActivity::class.java
+                        BottomNavigationActivity::class.java
                     )
                 )
                 finish()
@@ -83,6 +84,7 @@ fun SplashCard(
         Box(modifier = modifier.fillMaxHeight()) {
             Image(
                 painter = painter,
+
                 contentDescription = contentDescription,
                 contentScale = ContentScale.Crop
 
