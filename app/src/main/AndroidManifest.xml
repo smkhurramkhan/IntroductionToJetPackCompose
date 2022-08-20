@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MoreComplexLayoutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_more_complex_layout"
+            android:theme="@style/Theme.IntroductionToJetPackCompose" />
         <activity
             android:name=".multiselectlazycolum.MultiSelectLazyColumnActivity"
             android:exported="false"
