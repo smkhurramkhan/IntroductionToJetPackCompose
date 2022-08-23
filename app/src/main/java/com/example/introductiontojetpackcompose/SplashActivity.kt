@@ -25,9 +25,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.introductiontojetpackcompose.multiselectlazycolum.MultiSelectLazyColumnActivity
+import com.example.introductiontojetpackcompose.permissions.ActivityPermissions
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
 
 class SplashActivity : ComponentActivity() {
+    @OptIn(ExperimentalPermissionsApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -58,7 +61,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        MultiSelectLazyColumnActivity::class.java
+                        ActivityPermissions::class.java
                     )
                 )
                 finish()
