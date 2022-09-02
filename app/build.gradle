@@ -73,5 +73,9 @@ dependencies {
 
 
     implementation "com.google.accompanist:accompanist-permissions:0.21.1-beta"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+
 
 }
