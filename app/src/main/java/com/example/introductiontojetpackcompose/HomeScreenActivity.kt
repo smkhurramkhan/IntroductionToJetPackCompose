@@ -35,7 +35,7 @@ class HomeScreenActivity : ComponentActivity() {
                     start.linkTo(greenBox.end)
                     end.linkTo(parent.end)
                     bottom.linkTo(parent.bottom)
-                    width =  Dimension.value(100.dp)
+                    width = Dimension.value(100.dp)
                     height = Dimension.value(100.dp)
                 }
                 createHorizontalChain(
@@ -58,4 +58,5 @@ class HomeScreenActivity : ComponentActivity() {
         }
     }
 }
+
 

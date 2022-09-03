@@ -24,9 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.introductiontojetpackcompose.composepagination.PaginationActivity
-import com.example.introductiontojetpackcompose.multiselectlazycolum.MultiSelectLazyColumnActivity
-import com.example.introductiontojetpackcompose.permissions.ActivityPermissions
+import com.example.introductiontojetpackcompose.instaui.InstaUIActivity
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
 
@@ -62,7 +60,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        PaginationActivity::class.java
+                        InstaUIActivity::class.java
                     )
                 )
                 finish()
