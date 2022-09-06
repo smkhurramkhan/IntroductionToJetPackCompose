@@ -25,9 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.introductiontojetpackcompose.bottomsheet.BottomSheetActivity
-import com.example.introductiontojetpackcompose.instaui.InstaUIActivity
-import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.example.introductiontojetpackcompose.navdrawer.NavDrawerActivity
 
 
 @ExperimentalMaterialApi
@@ -62,7 +60,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        BottomSheetActivity::class.java
+                        NavDrawerActivity::class.java
                     )
                 )
                 finish()
