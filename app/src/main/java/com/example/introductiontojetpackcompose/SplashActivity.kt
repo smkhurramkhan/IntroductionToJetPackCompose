@@ -11,6 +11,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,12 +25,13 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.introductiontojetpackcompose.bottomsheet.BottomSheetActivity
 import com.example.introductiontojetpackcompose.instaui.InstaUIActivity
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
 
+@ExperimentalMaterialApi
 class SplashActivity : ComponentActivity() {
-    @OptIn(ExperimentalPermissionsApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -60,7 +62,7 @@ class SplashActivity : ComponentActivity() {
                 startActivity(
                     Intent(
                         this,
-                        InstaUIActivity::class.java
+                        BottomSheetActivity::class.java
                     )
                 )
                 finish()
