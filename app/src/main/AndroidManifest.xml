@@ -17,6 +17,11 @@
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityNewLayout"
+            android:exported="false"
+            android:label="@string/title_activity_new_layout"
+            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+        <activity
             android:name=".navdrawer.NavDrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_nav_drawer"

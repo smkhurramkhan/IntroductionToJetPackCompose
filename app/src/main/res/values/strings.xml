@@ -27,4 +27,5 @@
     <string name="title_activity_pagination">PaginationActivity</string>
     <string name="title_activity_bottom_sheet">BottomSheetActivity</string>
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="title_activity_new_layout">ActivityNewLayout</string>
 </resources>
