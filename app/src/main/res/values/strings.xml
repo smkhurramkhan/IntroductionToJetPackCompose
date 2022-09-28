@@ -29,4 +29,5 @@
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="title_activity_new_layout">ActivityNewLayout</string>
     <string name="title_activity_more_complex_layouts">ActivityMoreComplexLayouts</string>
+    <string name="title_activity_more_views">MoreViewsActivity</string>
 </resources>
