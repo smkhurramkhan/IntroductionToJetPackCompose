@@ -25,16 +25,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ActivityMoreComplexLayouts"
-            android:exported="false"
-            android:label="@string/title_activity_more_complex_layouts"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
-        <activity
-            android:name=".ActivityNewLayout"
-            android:exported="false"
-            android:label="@string/title_activity_new_layout"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+
         <activity
             android:name=".navdrawer.NavDrawerActivity"
             android:exported="false"
@@ -55,11 +46,7 @@
             android:exported="false"
             android:label="@string/title_activity_permissions"
             android:theme="@style/Theme.IntroductionToJetPackCompose" />
-        <activity
-            android:name=".MoreComplexLayoutActivity"
-            android:exported="false"
-            android:label="@string/title_activity_more_complex_layout"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+
         <activity
             android:name=".multiselectlazycolum.MultiSelectLazyColumnActivity"
             android:exported="false"
@@ -102,11 +89,7 @@
             android:exported="false"
             android:label="@string/title_activity_layout"
             android:theme="@style/Theme.IntroductionToJetPackCompose" />
-        <activity
-            android:name=".ui.ui.MoreViewActivity"
-            android:exported="false"
-            android:label="@string/title_activity_more_view"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+
         <activity
             android:name=".ui.ui.ListsActivity"
             android:exported="false"
