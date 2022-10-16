@@ -31,4 +31,5 @@
     <string name="title_activity_more_complex_layouts">ActivityMoreComplexLayouts</string>
     <string name="title_activity_more_views">MoreViewsActivity</string>
     <string name="title_activity_complex_recyclers">ActivityComplexRecyclers</string>
+    <string name="title_activity_enhanced_recycler">ActivityEnhancedRecycler</string>
 </resources>

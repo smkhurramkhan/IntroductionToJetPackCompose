@@ -17,6 +17,15 @@
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityEnhancedRecycler"
+            android:exported="false"
+            android:label="@string/title_activity_enhanced_recycler"
+            android:theme="@style/Theme.IntroductionToJetPackCompose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ActivityComplexRecyclers"
             android:exported="false"
             android:label="@string/title_activity_complex_recyclers"
