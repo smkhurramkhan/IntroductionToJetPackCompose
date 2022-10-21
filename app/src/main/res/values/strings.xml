@@ -33,4 +33,5 @@
     <string name="title_activity_complex_recyclers">ActivityComplexRecyclers</string>
     <string name="title_activity_enhanced_recycler">ActivityEnhancedRecycler</string>
     <string name="title_activity_more_complex_ui">MoreComplexUI</string>
+    <string name="title_activity_news_feed">ActivityNewsFeed</string>
 </resources>
