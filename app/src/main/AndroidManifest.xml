@@ -17,6 +17,15 @@
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
         <activity
+            android:name=".whatsappui.WhatsAppActivity"
+            android:exported="false"
+            android:label="@string/title_activity_whats_app"
+            android:theme="@style/Theme.IntroductionToJetPackCompose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ActivityNewsFeed"
             android:exported="false"
             android:label="@string/title_activity_news_feed"
@@ -34,7 +43,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-      r
         <activity
             android:name=".ui.MoreViewsActivity"
             android:exported="false"
