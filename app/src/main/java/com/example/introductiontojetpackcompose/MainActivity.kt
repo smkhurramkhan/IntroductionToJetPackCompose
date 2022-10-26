@@ -119,7 +119,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "$name")
+    Text(text = name)
 }
 
 
