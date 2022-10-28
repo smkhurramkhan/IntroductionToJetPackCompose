@@ -35,4 +35,5 @@
     <string name="title_activity_more_complex_ui">MoreComplexUI</string>
     <string name="title_activity_news_feed">ActivityNewsFeed</string>
     <string name="title_activity_whats_app">WhatsAppActivity</string>
+    <string name="title_activity_complex_activities">ComplexActivities</string>
 </resources>

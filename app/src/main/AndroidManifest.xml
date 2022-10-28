@@ -17,6 +17,15 @@
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
         <activity
+            android:name=".ComplexActivities"
+            android:exported="false"
+            android:label="@string/title_activity_complex_activities"
+            android:theme="@style/Theme.IntroductionToJetPackCompose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".whatsappui.WhatsAppActivity"
             android:exported="false"
             android:label="@string/title_activity_whats_app"
