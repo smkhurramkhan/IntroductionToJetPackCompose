@@ -96,11 +96,7 @@
         <activity
             android:name=".MoreJetPackComponents"
             android:exported="false" />
-        <activity
-            android:name=".HomeScreenActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home_screen"
-            android:theme="@style/Theme.IntroductionToJetPackCompose" />
+
         <activity
             android:name=".LayoutActivity"
             android:exported="false"
