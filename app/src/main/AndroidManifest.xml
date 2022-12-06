@@ -15,8 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntroductionToJetPackCompose"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".DocReaderMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_doc_reader_main"
+            android:theme="@style/Theme.IntroductionToJetPackCompose">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ActivityNewsFeed"
             android:exported="false"
@@ -96,7 +103,6 @@
         <activity
             android:name=".MoreJetPackComponents"
             android:exported="false" />
-
         <activity
             android:name=".LayoutActivity"
             android:exported="false"
